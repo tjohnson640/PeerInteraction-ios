@@ -1,18 +1,16 @@
-//
-//  AppDelegate.m
-//  PeerInteraction
-//
-//  Created by Tyler Johnson on 10/30/13.
-//  Copyright (c) 2013 livefront. All rights reserved.
-//
-
 #import "AppDelegate.h"
+#import "AppDelegate+Private.h"
+#import "RootViewController.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.rootViewController = [[RootViewController alloc] init];
+    self.window.rootViewController = self.rootViewController;
+    [self.window makeKeyAndVisible];
+
     return YES;
 }
 							

@@ -21,6 +21,9 @@
 		96873DA81821DA6F00D32C2D /* PeerInteractionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 96873DA71821DA6F00D32C2D /* PeerInteractionTests.m */; };
 		96873DB91821DB1300D32C2D /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96873DB71821DB1300D32C2D /* RootViewController.m */; };
 		96873DBA1821DB1300D32C2D /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96873DB81821DB1300D32C2D /* RootViewController.xib */; };
+		96873DC11821E67A00D32C2D /* WelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96873DBF1821E67A00D32C2D /* WelcomeViewController.m */; };
+		96873DC21821E67A00D32C2D /* WelcomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96873DC01821E67A00D32C2D /* WelcomeViewController.xib */; };
+		96873DC51821E86500D32C2D /* MultipeerConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96873DC41821E86500D32C2D /* MultipeerConnectivity.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +57,12 @@
 		96873DB71821DB1300D32C2D /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RootViewController.m; path = ViewControllers/RootViewController.m; sourceTree = "<group>"; };
 		96873DB81821DB1300D32C2D /* RootViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RootViewController.xib; path = ViewControllers/RootViewController.xib; sourceTree = "<group>"; };
 		96873DBC1821DB4F00D32C2D /* RootViewController+Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "RootViewController+Private.h"; path = "ViewControllers/RootViewController+Private.h"; sourceTree = "<group>"; };
+		96873DBD1821E51000D32C2D /* AppDelegate+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+Private.h"; sourceTree = "<group>"; };
+		96873DBE1821E67A00D32C2D /* WelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WelcomeViewController.h; path = ViewControllers/WelcomeViewController.h; sourceTree = "<group>"; };
+		96873DBF1821E67A00D32C2D /* WelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WelcomeViewController.m; path = ViewControllers/WelcomeViewController.m; sourceTree = "<group>"; };
+		96873DC01821E67A00D32C2D /* WelcomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = WelcomeViewController.xib; path = ViewControllers/WelcomeViewController.xib; sourceTree = "<group>"; };
+		96873DC31821E69500D32C2D /* WelcomeViewController+Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "WelcomeViewController+Private.h"; path = "ViewControllers/WelcomeViewController+Private.h"; sourceTree = "<group>"; };
+		96873DC41821E86500D32C2D /* MultipeerConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MultipeerConnectivity.framework; path = System/Library/Frameworks/MultipeerConnectivity.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,8 +71,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				96873D7F1821DA6F00D32C2D /* CoreGraphics.framework in Frameworks */,
-				96873D811821DA6F00D32C2D /* UIKit.framework in Frameworks */,
 				96873D7D1821DA6F00D32C2D /* Foundation.framework in Frameworks */,
+				96873DC51821E86500D32C2D /* MultipeerConnectivity.framework in Frameworks */,
+				96873D811821DA6F00D32C2D /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,6 +112,7 @@
 		96873D7B1821DA6F00D32C2D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				96873DC41821E86500D32C2D /* MultipeerConnectivity.framework */,
 				96873D7C1821DA6F00D32C2D /* Foundation.framework */,
 				96873D7E1821DA6F00D32C2D /* CoreGraphics.framework */,
 				96873D801821DA6F00D32C2D /* UIKit.framework */,
@@ -113,11 +124,12 @@
 		96873D821821DA6F00D32C2D /* PeerInteraction */ = {
 			isa = PBXGroup;
 			children = (
-				96873DBB1821DB3100D32C2D /* ViewControllers */,
+				96873DBD1821E51000D32C2D /* AppDelegate+Private.h */,
 				96873D8B1821DA6F00D32C2D /* AppDelegate.h */,
 				96873D8C1821DA6F00D32C2D /* AppDelegate.m */,
 				96873D941821DA6F00D32C2D /* Images.xcassets */,
 				96873D831821DA6F00D32C2D /* Supporting Files */,
+				96873DBB1821DB3100D32C2D /* ViewControllers */,
 			);
 			path = PeerInteraction;
 			sourceTree = "<group>";
@@ -154,10 +166,14 @@
 		96873DBB1821DB3100D32C2D /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				96873DBC1821DB4F00D32C2D /* RootViewController+Private.h */,
 				96873DB61821DB1300D32C2D /* RootViewController.h */,
 				96873DB71821DB1300D32C2D /* RootViewController.m */,
 				96873DB81821DB1300D32C2D /* RootViewController.xib */,
-				96873DBC1821DB4F00D32C2D /* RootViewController+Private.h */,
+				96873DC31821E69500D32C2D /* WelcomeViewController+Private.h */,
+				96873DBE1821E67A00D32C2D /* WelcomeViewController.h */,
+				96873DBF1821E67A00D32C2D /* WelcomeViewController.m */,
+				96873DC01821E67A00D32C2D /* WelcomeViewController.xib */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -239,6 +255,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				96873D951821DA6F00D32C2D /* Images.xcassets in Resources */,
+				96873DC21821E67A00D32C2D /* WelcomeViewController.xib in Resources */,
 				96873D871821DA6F00D32C2D /* InfoPlist.strings in Resources */,
 				96873DBA1821DB1300D32C2D /* RootViewController.xib in Resources */,
 			);
@@ -260,6 +277,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				96873D8D1821DA6F00D32C2D /* AppDelegate.m in Sources */,
+				96873DC11821E67A00D32C2D /* WelcomeViewController.m in Sources */,
 				96873DB91821DB1300D32C2D /* RootViewController.m in Sources */,
 				96873D891821DA6F00D32C2D /* main.m in Sources */,
 			);
@@ -464,6 +482,7 @@
 				96873DAD1821DA6F00D32C2D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		96873DAE1821DA6F00D32C2D /* Build configuration list for PBXNativeTarget "PeerInteractionTests" */ = {
 			isa = XCConfigurationList;
@@ -472,6 +491,7 @@
 				96873DB01821DA6F00D32C2D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
